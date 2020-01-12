@@ -10,7 +10,7 @@ def preprocess(Il, Ir):
 
     return Il, (Ir.astype(float) * energy_Il/energy_Ir).astype(np.uint8)
 
-def computeDisp(Il, Ir, max_disp=50, do_refine=True):
+def computeDisp(Il, Ir, max_disp=100, do_refine=True):
     
     Il, Ir = preprocess(Il, Ir)
 

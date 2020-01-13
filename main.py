@@ -3,7 +3,7 @@ import argparse
 import cv2
 import time
 from util import writePFM
-from computeDisp import computeDisp
+from computeDisp_cnn import computeDisp
 
 parser = argparse.ArgumentParser(description='Disparity Estimation')
 parser.add_argument('--input-left', default='./data/Synthetic/TL0.png', type=str, help='input left image')

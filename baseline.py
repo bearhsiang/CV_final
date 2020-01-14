@@ -17,6 +17,10 @@ def estimate_cost(features_l, features_r):
     diff_I = np.sum(diff[:3], axis=0)
     diff_g = np.sum(diff[3:], axis=0)
 
+    diff_I = np.clip(diff_I, 0, 100)
+    diff_g = np.clip(diff_g, 0, 100)
+    # print(np.mean(diff_I), np.mean(diff_g))
+
     alpha = 0.5
 
     return (1-alpha)*diff_I + alpha * diff_g
